@@ -11,13 +11,7 @@ La guida parte da una configurazione funzionante con FreePBX 16 (Asterisk 18) e 
 
 ## Schema
 
-```mermaid
-flowchart LR
-    HA["Home Assistant<br/>rest_command"] -->|ARI| PBX["FreePBX<br/>Asterisk 18"]
-    PBX -->|SIP| ILIAD["Iliad Fibra<br/>voip.iliad.it"]
-    ILIAD -->|voce| TEL["Chi risponde<br/>cellulare o fisso"]
-    PBX <-->|SIP| INT["Interno 1001<br/>telefono SIP"]
-```
+![Schema: Home Assistant, FreePBX, Iliad Fibra, chi risponde e interno 1001](docs/schema.svg)
 
 Home Assistant manda il comando a FreePBX, che apre la chiamata verso Iliad. Gli interni di casa usano lo stesso FreePBX per telefonare e ricevere.
 

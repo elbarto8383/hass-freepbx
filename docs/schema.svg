@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="900" height="300" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+
+  <rect x="30" y="50" width="170" height="70" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="115" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">Home Assistant</text>
+  <text x="115" y="104" text-anchor="middle" font-size="13" fill="#334155">rest_command</text>
+
+  <rect x="365" y="50" width="170" height="70" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="450" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">FreePBX</text>
+  <text x="450" y="104" text-anchor="middle" font-size="13" fill="#334155">Asterisk 18</text>
+
+  <rect x="700" y="50" width="170" height="70" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+  <text x="785" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">Iliad Fibra</text>
+  <text x="785" y="104" text-anchor="middle" font-size="13" fill="#334155">voip.iliad.it</text>
+
+  <rect x="700" y="195" width="170" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="785" y="227" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">Chi risponde</text>
+  <text x="785" y="249" text-anchor="middle" font-size="13" fill="#334155">cellulare o fisso</text>
+
+  <rect x="365" y="195" width="170" height="70" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="450" y="227" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">Interno 1001</text>
+  <text x="450" y="249" text-anchor="middle" font-size="13" fill="#334155">telefono SIP</text>
+
+  <line x1="200" y1="85" x2="363" y2="85" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <text x="282" y="75" text-anchor="middle" font-size="13" fill="#334155">ARI</text>
+
+  <line x1="535" y1="85" x2="698" y2="85" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <text x="617" y="75" text-anchor="middle" font-size="13" fill="#334155">SIP</text>
+
+  <line x1="785" y1="120" x2="785" y2="193" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <text x="800" y="160" font-size="13" fill="#334155">voce</text>
+
+  <line x1="450" y1="122" x2="450" y2="193" stroke="#475569" stroke-width="2" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="465" y="160" font-size="13" fill="#334155">SIP</text>
+</svg>
