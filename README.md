@@ -13,13 +13,13 @@ La guida parte da una configurazione funzionante con FreePBX 16 (Asterisk 18) e 
 
 ![Schema: Home Assistant, FreePBX, Iliad Fibra, chi risponde e interno 1001](docs/schema.svg)
 
-Home Assistant manda il comando a FreePBX, che apre la chiamata verso Iliad. Gli interni di casa usano lo stesso FreePBX per telefonare e ricevere.
+Home Assistant si registra su FreePBX come un interno (con l'integrazione [hass-sip](https://github.com/eigger/hass-sip)) e, quando un'automazione lo chiede, FreePBX apre la chiamata verso Iliad. Gli interni di casa usano lo stesso FreePBX per telefonare e ricevere.
 
 ## Cosa serve
 
 - Iliad Fibra con la linea fissa attiva e i suoi dati VoIP (numero, password, server).
 - Un server FreePBX 16 nella stessa rete di Home Assistant (VM o mini PC), con accesso SSH.
-- Home Assistant.
+- Home Assistant con HACS (per installare l'integrazione hass-sip).
 - Un telefono SIP o un softphone, per esempio Linphone, Zoiper o Telephone su Mac.
 - Circa due ore di lavoro.
 
@@ -30,8 +30,8 @@ Home Assistant manda il comando a FreePBX, che apre la chiamata verso Iliad. Gli
 3. [Rotta in uscita](docs/03-rotta-in-uscita.md)
 4. [Rotta in entrata](docs/04-rotta-in-entrata.md)
 5. [Crea l'interno](docs/05-interno.md)
-6. [Collega Home Assistant](docs/06-home-assistant.md)
-7. [Il messaggio vocale](docs/07-messaggio-vocale.md)
+6. [Collega Home Assistant (hass-sip)](docs/06-home-assistant.md)
+7. [Alternativa: chiamare con l'ARI di Asterisk](docs/07-alternativa-ari.md)
 
 Inoltre:
 
@@ -41,7 +41,7 @@ Inoltre:
 
 ## Avvertenze
 
-- Il collegamento con Home Assistant è descritto con l'ARI di Asterisk e un `rest_command`. È uno dei modi possibili: verificalo sul tuo sistema prima di affidargli un allarme.
+- Il passo 6 (hass-sip) è stato provato con una chiamata di prova verso un cellulare. Prima di affidargli un allarme verifica tu stesso la catena completa: automazione, chiamata, audio.
 - I nomi delle voci nella GUI di FreePBX e nell'area personale Iliad possono cambiare con gli aggiornamenti.
 - Non aprire mai la porta 5060 del router verso internet: un FreePBX con SIP esposto viene attaccato in pochi minuti.
 - Non pubblicare mai numero, password o indirizzi IP reali: negli esempi sono tutti segnaposto.

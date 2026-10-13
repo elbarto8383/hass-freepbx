@@ -1,6 +1,7 @@
-# Esempio: chiama un numero quando scatta l'allarme.
-# Sostituisci entity_id e numero con i tuoi. Il numero va scritto
-# come lo digiteresti da un interno (per esempio 3331234567).
+# Esempio: chiama un numero quando scatta l'allarme (integrazione hass-sip).
+# Sostituisci alarm_control_panel.casa, il numero e l'entità media_player.
+# Il numero va scritto come lo digiteresti da un interno (es. 3331234567).
+# L'entità reale si trova in Strumenti per sviluppatori -> Stati ("media_player.sip_...").
 automation:
   - alias: Chiama se scatta l'allarme
     triggers:
@@ -8,6 +9,10 @@ automation:
         entity_id: alarm_control_panel.casa
         to: triggered
     actions:
-      - action: rest_command.asterisk_chiama
+      - action: sip.dial
         data:
-          numero: "3331234567"
+          number: "3331234567"
+          message: Attenzione, sta suonando l'allarme di casa
+          tts_engine: tts.google_translate
+        target:
+          entity_id: media_player.IL_TUO_ID

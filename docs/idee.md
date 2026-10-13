@@ -9,4 +9,4 @@ Una volta che il numero di casa è dentro FreePBX, le automazioni di Home Assist
 - Blocco dei numeri indesiderati con la blacklist di FreePBX.
 - Citofono o campanello SIP che chiama gli interni.
 
-Ogni idea riusa lo stesso schema: un'automazione chiama `rest_command.asterisk_chiama` e un contesto in `extensions_custom.conf` decide cosa succede alla risposta.
+Ogni idea riusa lo stesso schema: un'automazione chiama `sip.dial` e, alla risposta, Home Assistant legge il messaggio o apre un menu a tasti.

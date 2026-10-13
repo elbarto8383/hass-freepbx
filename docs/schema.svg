@@ -27,7 +27,7 @@
   <text x="450" y="249" text-anchor="middle" font-size="13" fill="#334155">telefono SIP</text>
 
   <line x1="200" y1="85" x2="363" y2="85" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
-  <text x="282" y="75" text-anchor="middle" font-size="13" fill="#334155">ARI</text>
+  <text x="282" y="75" text-anchor="middle" font-size="13" fill="#334155">SIP</text>
 
   <line x1="535" y1="85" x2="698" y2="85" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
   <text x="617" y="75" text-anchor="middle" font-size="13" fill="#334155">SIP</text>
