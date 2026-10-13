@@ -1,0 +1,9 @@
+# Da aggiungere a configuration.yaml (poi riavvia Home Assistant).
+# Sostituisci IP_FREEPBX con l'indirizzo del tuo FreePBX.
+# La password dell'utente ARI va in secrets.yaml (vedi secrets.yaml.example).
+rest_command:
+  asterisk_chiama:
+    url: "http://IP_FREEPBX:8088/ari/channels?endpoint=Local/{{ numero }}@from-internal&extension=s&context=chiamata-allarme&priority=1&callerId=Casa&timeout=40"
+    method: post
+    username: hass
+    password: !secret ari_password

@@ -1,0 +1,4 @@
+secrets.yaml
+*.wav
+*.log
+.DS_Store

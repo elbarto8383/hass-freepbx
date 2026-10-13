@@ -1,0 +1,13 @@
+# Esempio: chiama un numero quando scatta l'allarme.
+# Sostituisci entity_id e numero con i tuoi. Il numero va scritto
+# come lo digiteresti da un interno (per esempio 3331234567).
+automation:
+  - alias: Chiama se scatta l'allarme
+    triggers:
+      - trigger: state
+        entity_id: alarm_control_panel.casa
+        to: triggered
+    actions:
+      - action: rest_command.asterisk_chiama
+        data:
+          numero: "3331234567"
